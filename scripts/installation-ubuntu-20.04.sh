@@ -62,7 +62,7 @@ sed -i.bak "s/DB_PASSWORD=.*\$/DB_PASSWORD=$DB_PASS/" .env
 # Generate the application key
 php artisan key:generate --no-interaction --force
 # Migrate the databases
-php artisan migrate --no-interaction --force
+# php artisan migrate --no-interaction --force
 
 # Set file and folder permissions
 chown www-data:www-data -R bootstrap/cache public/uploads storage && chmod -R 755 bootstrap/cache public/uploads storage
